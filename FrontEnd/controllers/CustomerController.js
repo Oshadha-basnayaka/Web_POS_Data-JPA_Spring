@@ -128,9 +128,9 @@ function getAllCustomers() {
     });
 }
 
-function deleteCustomer(id) {
+function deleteCustomer(cusID) {
     $.ajax({
-        url: BASE_URL + 'customer?cusID=' + id,
+        url: BASE_URL + 'customer?cusID=' + cusID,
         method: 'delete',
         headers:{
             Auth:"user=admin,pass=admin"
@@ -186,10 +186,10 @@ function updateCustomer(id) {
             let customerName = $("#txtCustomerName").val();
             let customerAddress = $("#txtCustomerAddress").val();
             let customerSalary = $("#txtCustomerSalary").val();
-            customer.id = id;
-            customer.name = customerName;
-            customer.address = customerAddress;
-            customer.salary = customerSalary;
+            customer.cusID = id;
+            customer.cusName = customerName;
+            customer.cusAddress = customerAddress;
+            customer.cusSalary = customerSalary;
 
             $.ajax({
                 url: BASE_URL + 'customer',
