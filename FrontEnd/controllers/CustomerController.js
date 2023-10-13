@@ -113,10 +113,10 @@ function getAllCustomers() {
             let customers = response.data;
             for (let i in customers) {
                 let cus = customers[i];
-                let id = cus.id;
-                let name = cus.name;
-                let address = cus.address;
-                let salary = cus.salary;
+                let id = cus.cusID;
+                let name = cus.cusName;
+                let address = cus.cusAddress;
+                let salary = cus.cusSalary;
                 let row = `<tr><td>${id}</td><td>${name}</td><td>${address}</td><td>${salary}</td></tr>`;
                 $("#tblCustomer").append(row);
             }
