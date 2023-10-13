@@ -5,12 +5,12 @@ getAllCustomers();
 
 //add customer event
 $("#btnCustomer").click(function () {
-    saveCustomer();
-    // if (checkAll()) {
-    //     saveCustomer();
-    // } else {
-    //     alert("Error");
-    // }
+    // saveCustomer();
+    if (checkAll()) {
+        saveCustomer();
+    } else {
+        alert("Error");
+    }
 
 });
 

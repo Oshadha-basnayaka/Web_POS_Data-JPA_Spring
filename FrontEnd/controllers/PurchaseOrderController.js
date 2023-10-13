@@ -36,7 +36,7 @@ function loadAllCustomers() {
         success: function (resp) {
             console.log(resp);
             for (let cus of resp.data) {
-                $("#selectCusID").append(`<option value="${cus.id}">${cus.id}</option>`);
+                $("#selectCusID").append(`<option value="${cus.cusID}">${cus.cusID}</option>`);
             }
         }
     });
@@ -89,9 +89,10 @@ $("#selectCusID").change(function () {
     $("#orderCustomerID").val(cusID);
     let res = searchCustomer(cusID);
     if (res.length > 0) {
-        $("#orderCustomerName").val(res[0].name);
-        $("#orderCustomerSalary").val(res[0].salary);
-        $("#orderCustomerAddress").val(res[0].address);
+        $("#orderCustomerName").val(res[0].cusName);
+        $("#orderCustomerAddress").val(res[0].cusAddress);
+        $("#orderCustomerSalary").val(res[0].cusSalary);
+
     }
 
 });
